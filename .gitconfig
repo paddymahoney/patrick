@@ -1,0 +1,46 @@
+[user]
+	name = Patrick Mahoney
+	email = paddy.mahoney@gmail.com
+[merge]
+	tool = meld
+[push]
+	default = simple
+[core]
+	editor = vim
+	excludesfile = /Users/patrick/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+[alias]
+        c = commit 
+        s = status
+        st = status
+        sta = status
+        stat = status
+        statu = status
+        status = status
+        a = add 
+        ad = add 
+        add = add
+        r = rebase 
+        re = rebase 
+        reb = rebase 
+        reba = rebase 
+        rebas = rebase 
+        ref = reflog
+        refl = reflog
+        reflo = reflog
+        r = rebase 
+        d = diff
+        di = diff
+        dif = diff
+        undo= reset --hard
+        bam = "!git add -p && git commit  && git fetch origin && git rebase -i origin/master && git status"
+        b=bam
+        ba=bam
+        graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f" 
+        up = "git fetch origin && git rebase origin/develop"
+        auto = false
+        record = !git add -p -- $@ && git commit -m "bam!") || git reset' --
+        
