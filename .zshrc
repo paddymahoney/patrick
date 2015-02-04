@@ -43,6 +43,8 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 plugins=(git brew osx sublime scala sbt gem)
 setopt autopushd pushdsilent pushdtohome 
+
+# aliases
 alias dc='popd'
 alias g='git'
 alias gs='git status'
@@ -50,5 +52,8 @@ alias zshrc='vim ~/.zshrc'
 alias ls='ls -al'
 alias gitconfig='vim ~/.gitconfig'
 alias zshenv='vim ~/.zshenv'
-# aliases
+
 # Customize to your needs...
+
+source ~/.docker
+
