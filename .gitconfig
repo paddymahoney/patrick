@@ -43,4 +43,11 @@
         up = "git fetch origin && git rebase origin/develop"
         auto = false
         record = !git add -p -- $@ && git commit -m "bam!") || git reset' --
-        
+       ac = !git add -A && git commit
+    unstage = reset HEAD --
+       commit-file ="!f() { \
+        git add $1; \
+        git commit -m $1; \
+        git commit --amend; \
+      }; f"
+      staged = diff --staged 
