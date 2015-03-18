@@ -51,10 +51,12 @@ alias gs='git status'
 alias gb='git bam'
 alias gl='git log'
 alias gd='git diff'
+alias gcf='git commit-file'
 alias zshrc='vim ~/.zshrc'
 alias ls='ls -al'
 alias gitconfig='vim ~/.gitconfig'
 alias zshenv='vim ~/.zshenv'
+alias killJava='sudo killall -9 java'
 
 # Customize to your needs...
 
