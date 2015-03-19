@@ -40,7 +40,10 @@
         b=bam
         ba=bam
         graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f" 
-        up = "git fetch origin && git rebase origin/develop"
+        up ="!f() { \
+          git fetch origin; \
+          git rebase origin/develop; \
+        }; f"
         auto = false
         record = !git add -p -- $@ && git commit -m "bam!") || git reset' --
        ac = !git add -A && git commit
