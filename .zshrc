@@ -74,3 +74,6 @@ function setjdk() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
  }
 setjdk 1.8
+
+export JDEPEND_HOME="/Applications/jdepend-2.9.1"
+export CLASSPATH=$CLASSPATH:$JDEPEND_HOME/lib/jdepend-2.9.1.jar 
