@@ -57,8 +57,6 @@ alias ls='ls -al'
 alias gitconfig='vim ~/.gitconfig'
 alias zshenv='vim ~/.zshenv'
 alias killJava='sudo killall -9 java'
-
-# Customize to your needs...
-
+alias killPlay='lsof -n -i4TCP:9000 | grep LISTEN | awk "/LISTEN/ {print \$2}" | xargs kill -9'
 source ~/.docker
 
