@@ -56,9 +56,10 @@ alias gcf='git commit-file'
 alias zshrc='vim ~/.zshrc; source ~/.zshrc'
 alias ls='ls -al'
 alias gitconfig='vim ~/.gitconfig'
-alias zshenv='vim ~/.zshenv'
+alias zshenv='vim ~/.zshenv; source ~/.zshenv'
 alias killJava='sudo killall -9 java'
 alias killPlay='lsof -n -i4TCP:9000 | grep LISTEN | awk "/LISTEN/ {print \$2}" | xargs kill -9'
+
 source ~/.docker
 
 function setjdk() {
