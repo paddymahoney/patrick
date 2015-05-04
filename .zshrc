@@ -41,7 +41,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git ruby lighthouse)
 source $ZSH/oh-my-zsh.sh
-plugins=(git brew osx sublime scala sbt gem)
+plugins=(git brew osx sublime scala sbt gem svn tmux vagrant sublime screen xcode ant adb aws bower brew brew-cask bundler cake capistrano command-not-found cp debian docker emacs git-flow git-extras github gitignore knife mercurial postgres python sudo)
+
 setopt autopushd pushdsilent pushdtohome 
 
 # aliases
