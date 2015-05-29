@@ -49,6 +49,7 @@ setopt autopushd pushdsilent pushdtohome
 alias dc='popd'
 alias g='git'
 alias gs='git status'
+alias ga='git add -p'
 alias gb='git bam'
 alias gl='git log'
 alias gd='git diff'
