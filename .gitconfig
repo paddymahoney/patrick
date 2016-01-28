@@ -53,4 +53,7 @@
         git commit -m $1; \
         git commit --amend; \
       }; f"
-      staged = diff --staged 
+      staged = diff --staged
+      rebaseDev = rebase -i origin/develop
+      lr = log --reverse origin/develop..HEAD~1
+ 
