@@ -52,14 +52,20 @@ alias gs='git status'
 alias ga='git add -p'
 alias gb='git bam'
 alias gl='git log'
+alias glr='git lr'
 alias gd='git diff'
 alias gcf='git commit-file'
+alias grod='git fetch && git rebase -i origin/develop'
 alias zshrc='vim ~/.zshrc; source ~/.zshrc'
 alias ls='ls -al'
 alias gitconfig='vim ~/.gitconfig'
 alias zshenv='vim ~/.zshenv; source ~/.zshenv'
 alias killJava='sudo killall -9 java'
-alias killPlay='lsof -n -i4TCP:9000 | grep LISTEN | awk "/LISTEN/ {print \$2}" | xargs kill -9'
+alias killPlay='(lsof -n -i4TCP:9000 | grep LISTEN | awk "/LISTEN/ {print \$2}" | xargs kill -9) && sudo rm /Users/patrick/npl/RUNNING_PID'
+alias st='sbt test'
+alias gc='git c'
+
+export SBT_OPTS="${SBT_OPTS} -Dsbt.jse.engineType=Node -Dsbt.jse.command=$(which node)"
 
 source ~/.docker
 
@@ -79,4 +85,13 @@ function setjdk() {
 setjdk 1.8
 
 export JDEPEND_HOME="/Applications/jdepend-2.9.1"
-export CLASSPATH=$CLASSPATH:$JDEPEND_HOME/lib/jdepend-2.9.1.jar 
+export CLASSPATH=$CLASSPATH:$JDEPEND_HOME/lib/jdepend-2.9.1.jar
+
+# ==> Pouring zsh-5.0.8.yosemite.bottle.tar.gz
+# ==> Caveats
+# Add the following to your zshrc to access the online help:
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
+source /usr/local/share/zsh/site-functions/_aws
+
