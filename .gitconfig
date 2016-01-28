@@ -13,7 +13,7 @@
 	path = 
 [mergetool "sourcetree"]
 [alias]
-        c = commit 
+        c = commit --allow-empty  
         s = status
         st = status
         sta = status
