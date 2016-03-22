@@ -65,33 +65,4 @@ alias killPlay='(lsof -n -i4TCP:9000 | grep LISTEN | awk "/LISTEN/ {print \$2}" 
 alias st='sbt test'
 alias gc='git c'
 
-export SBT_OPTS="${SBT_OPTS} -Dsbt.jse.engineType=Node -Dsbt.jse.command=$(which node)"
-
-source ~/.docker
-
-function setjdk() {
-  if [ $# -ne 0 ]; then
-   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
-   if [ -n "${JAVA_HOME+x}" ]; then
-    removeFromPath $JAVA_HOME
-   fi
-   export JAVA_HOME=`/usr/libexec/java_home -v $@`
-   export PATH=$JAVA_HOME/bin:$PATH
-  fi
- }
- function removeFromPath() {
-  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
- }
-setjdk 1.8
-
-export JDEPEND_HOME="/Applications/jdepend-2.9.1"
-export CLASSPATH=$CLASSPATH:$JDEPEND_HOME/lib/jdepend-2.9.1.jar
-
-# ==> Pouring zsh-5.0.8.yosemite.bottle.tar.gz
-# ==> Caveats
-# Add the following to your zshrc to access the online help:
-autoload run-help
-HELPDIR=/usr/local/share/zsh/help
-
-source /usr/local/share/zsh/site-functions/_aws
-
+export SBT_OPTS="$SBT_OPTS -Dsbt.jse.engineType=Node -Dsbt.jse.command=$(where nodejs)"
