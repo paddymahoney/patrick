@@ -65,3 +65,5 @@ alias st='sbt test'
 alias gc='git c'
 
 export SBT_OPTS="$SBT_OPTS -Dsbt.jse.engineType=Node -Dsbt.jse.command=$(where nodejs)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
