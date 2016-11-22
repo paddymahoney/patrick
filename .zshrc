@@ -64,6 +64,22 @@ alias killPlay='(lsof -n -i4TCP:9000 | grep LISTEN | awk "/LISTEN/ {print \$2}" 
 alias st='sbt test'
 alias gc='git c'
 
-export SBT_OPTS="$SBT_OPTS -Dsbt.jse.engineType=Node -Dsbt.jse.command=$(where nodejs)"
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  platform='macos'
+fi
+
+node_command='nodejs'
+
+if [[ $platform == 'linux' ]]; then
+	node_command='nodejs'
+elif [[ $platform == 'macos' ]]; then
+  node_command='node'
+fi
+
+SBT_OPTS="-Dsbt.jse.engineType=Node -Dsbt.jse.command="$(where $node_command | head -n 1)""
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
