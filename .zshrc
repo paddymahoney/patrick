@@ -83,3 +83,8 @@ fi
 SBT_OPTS="-Dsbt.jse.engineType=Node -Dsbt.jse.command="$(where $node_command | head -n 1)""
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export NVM_DIR="$HOME/.nvm"
+source "/usr/local/opt/nvm/nvm.sh"
+
+alias bash_profile='vim ~/.bash_profile;';
+
