@@ -56,4 +56,4 @@
       staged = diff --staged
       rebaseDev = rebase -i origin/develop
       lr = log --reverse origin/develop..HEAD~1
- 
+      local-config = !vim .git/config 
