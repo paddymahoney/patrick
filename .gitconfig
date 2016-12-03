@@ -56,4 +56,5 @@
       staged = diff --staged
       rebaseDev = rebase -i origin/develop
       lr = log --reverse origin/develop..HEAD~1
-      local-config = !vim .git/config 
+      local-config = !vim .git/config
+      isomorphic-loader-config = add .isomorphic-loader-config.json; commit -m ".isomorphic-loader-config"
