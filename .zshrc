@@ -42,7 +42,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git ruby lighthouse)
 source $ZSH/oh-my-zsh.sh
 plugins=(git)
-setopt autopushd pushdsilent pushdtohome 
+setopt autopushd pushdsilent pushdtohome
 
 # aliases
 alias dc='popd'
@@ -75,7 +75,7 @@ fi
 node_command='nodejs'
 
 if [[ $platform == 'linux' ]]; then
-	node_command='nodejs'
+       node_command='nodejs'
 elif [[ $platform == 'macos' ]]; then
   node_command='node'
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
