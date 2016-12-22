@@ -87,3 +87,4 @@ SBT_OPTS="-Dsbt.jse.engineType=Node -Dsbt.jse.command="$(where $node_command | h
 
 alias bash_profile='vim ~/.bash_profile;';
 
+export PATH="/usr/local/sbin:$PATH"
