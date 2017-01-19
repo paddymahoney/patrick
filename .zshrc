@@ -88,3 +88,19 @@ SBT_OPTS="-Dsbt.jse.engineType=Node -Dsbt.jse.command="$(where $node_command | h
 alias bash_profile='vim ~/.bash_profile;';
 
 export PATH="/usr/local/sbin:$PATH"
+
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+eval "$(thefuck --alias)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/pmahoney/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/pmahoney/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/pmahoney/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/pmahoney/google-cloud-sdk/completion.zsh.inc'
+fi
+
+source /usr/local/share/antigen/antigen.zsh
