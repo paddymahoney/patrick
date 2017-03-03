@@ -104,3 +104,11 @@ if [ -f /Users/pmahoney/google-cloud-sdk/completion.zsh.inc ]; then
 fi
 
 source /usr/local/share/antigen/antigen.zsh
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export HAXE_STD_PATH="/usr/local/lib/haxe/std"
+
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
