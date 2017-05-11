@@ -115,3 +115,5 @@ export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
