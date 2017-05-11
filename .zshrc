@@ -113,3 +113,5 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+fpath=(/usr/local/share/zsh-completions $fpath)
