@@ -41,7 +41,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git ruby lighthouse)
 source $ZSH/oh-my-zsh.sh
-plugins=(git)
+plugins=(git ruby rails)
 setopt autopushd pushdsilent pushdtohome
 
 # aliases
