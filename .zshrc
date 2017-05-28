@@ -122,3 +122,5 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 . /Users/pmahoney/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 alias brewAll='for x in $(brew search); do brew install $x; done'
+
+if [ -e /Users/pmahoney/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/pmahoney/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
