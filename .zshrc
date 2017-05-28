@@ -124,3 +124,6 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias brewAll='for x in $(brew search); do brew install $x; done'
 
 if [ -e /Users/pmahoney/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/pmahoney/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+alias gitignore='git config --local -e'
+

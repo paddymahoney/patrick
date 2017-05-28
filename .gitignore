@@ -8,6 +8,6 @@ cache/
 log/
 
 *
-
 !.gitignore
 !.zshrc
+.zsh_history
