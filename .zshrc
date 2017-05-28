@@ -117,3 +117,8 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# OPAM configuration
+. /Users/pmahoney/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+alias brewAll='for x in $(brew search); do brew install $x; done'
