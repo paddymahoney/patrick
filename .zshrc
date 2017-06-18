@@ -130,4 +130,4 @@ if [ -e /Users/pmahoney/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/pmaho
 
 alias gitignore='git config --local -e'
 
-. /home/patrick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true. /home/patrick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. /home/patrick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
